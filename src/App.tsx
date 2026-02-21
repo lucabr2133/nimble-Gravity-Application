@@ -16,7 +16,7 @@ function App() {
   } = useAviablePositions();
 
   if (candidateLoading || positionLoading) {
-    return <div className="text-center mt-10">Loading...</div>;
+    return <div className="text-center mt-10 w-screen">Loading...</div>;
   }
 
   if (candidateError || positionError) {
@@ -25,7 +25,9 @@ function App() {
     );
   }
   if (!candidate) {
-    return <div>No candidate found</div>;
+    return (
+      <div className="text-center mt-10 w-screen ">Not candidate found...</div>
+    );
   }
 
   return (

@@ -6,7 +6,7 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
 export function useAviablePositions() {
   const [positions, setPositions] = useState<AvaliablePositions[] | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -14,6 +14,7 @@ export function useAviablePositions() {
     async function getAvaliablePostions() {
       try {
         setLoading(true);
+
         setError(null);
 
         const response = await fetch(`${baseUrl}/api/jobs/get-list`, {

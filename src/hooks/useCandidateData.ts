@@ -6,7 +6,7 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
 export function useCandidateData(email: string) {
   const [candidate, setCandidate] = useState<CandidateData | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!email) return;
