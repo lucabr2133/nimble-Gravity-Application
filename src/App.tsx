@@ -1,6 +1,5 @@
 import { useCandidateData } from './hooks/useCandidateData';
 import { useAviablePositions } from './hooks/useAvaliablePositions';
-import type { AvaliablePositions } from './types';
 import PositionList from './components/postitionList';
 
 function App() {
