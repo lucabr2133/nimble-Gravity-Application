@@ -12,6 +12,7 @@ export const onHandleSubmit = async (
 
   const formData = new FormData(e.currentTarget);
   const repoUrl = formData.get('repoUrl') as string;
+  console.log(candidate.uuid, position.id, candidate.candidateId, repoUrl);
 
   try {
     setIsSubmitting(true);
